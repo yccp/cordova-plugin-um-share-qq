@@ -10,7 +10,7 @@
   <preference name="UM_SHARE_QQ_ANDROID_ID" />
   <preference name="UM_SHARE_QQ_ANDROID_KEY" />
   <platform name="ios">
-    <pod name="UMCShare/Social/QQ" />
+    <pod name="UMCShare/Social/ReducedQQ" />
     <config-file target="config.xml" parent="/*">
       <feature name="UMShareQQ">
         <param name="ios-package" value="UMShareQQ" />
