@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+  xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-um-share-qq" version="1.0.0">
+  <name>UMShareQQ</name>
+  <description>Cordova Plugin for Umeng Share QQ Suport</description>
+  <license>ISC</license>
+  <keywords>cordova,umeng,social,share,qq</keywords>
+  <preference name="UM_SHARE_QQ_IOS_ID" />
+  <preference name="UM_SHARE_QQ_IOS_KEY" />
+  <preference name="UM_SHARE_QQ_ANDROID_ID" />
+  <preference name="UM_SHARE_QQ_ANDROID_KEY" />
+  <platform name="ios">
+    <pod name="UMCShare/Social/QQ" />
+    <config-file target="config.xml" parent="/*">
+      <feature name="UMShareQQ">
+        <param name="ios-package" value="UMShareQQ" />
+        <param name="onload" value="true" />
+      </feature>
+      <preference name="UM_SHARE_QQ_IOS_ID" value="$UM_SHARE_QQ_IOS_ID" />
+      <preference name="UM_SHARE_QQ_IOS_KEY" value="$UM_SHARE_QQ_IOS_KEY" />
+    </config-file>
+    <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+      <array>
+        <string>mqqapi</string>
+        <string>mqq</string>
+        <string>mqqOpensdkSSoLogin</string>
+        <string>mqqconnect</string>
+        <string>mqqopensdkdataline</string>
+        <string>mqqopensdkgrouptribeshare</string>
+        <string>mqqopensdkfriend</string>
+        <string>mqqopensdkapi</string>
+        <string>mqqopensdkapiV2</string>
+        <string>mqqopensdkapiV3</string>
+        <string>mqqopensdkapiV4</string>
+        <string>mqzoneopensdk</string>
+        <string>wtloginmqq</string>
+        <string>wtloginmqq2</string>
+        <string>mqqwpa</string>
+        <string>mqzone</string>
+        <string>mqzonev2</string>
+        <string>mqzoneshare</string>
+        <string>wtloginqzone</string>
+        <string>mqzonewx</string>
+        <string>mqzoneopensdkapiV2</string>
+        <string>mqzoneopensdkapi19</string>
+        <string>mqzoneopensdkapi</string>
+        <string>mqqbrowser</string>
+        <string>mttbrowser</string>
+        <string>tim</string>
+        <string>timapi</string>
+        <string>timopensdkfriend</string>
+        <string>timwpa</string>
+        <string>timgamebindinggroup</string>
+        <string>timapiwallet</string>
+        <string>timOpensdkSSoLogin</string>
+        <string>wtlogintim</string>
+        <string>timopensdkgrouptribeshare</string>
+        <string>timopensdkapiV4</string>
+        <string>timgamebindinggroup</string>
+        <string>timopensdkdataline</string>
+        <string>wtlogintimV1</string>
+        <string>timapiV1</string>
+      </array>
+    </config-file>
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleURLName</key>
+          <string>qq</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>tencent$UM_SHARE_QQ_IOS_ID</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+    <header-file src="src/ios/UMShareQQ.h" />
+    <source-file src="src/ios/UMShareQQ.m" />
+  </platform>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="UMShareQQ">
+        <param name="android-package" value="news.chen.yu.ionic.UMShareQQ"/>
+        <param name="onload" value="true" />
+      </feature>
+      <preference name="UM_SHARE_QQ_ANDROID_ID" value="$UM_SHARE_QQ_ANDROID_ID" />
+      <preference name="UM_SHARE_QQ_ANDROID_KEY" value="$UM_SHARE_QQ_ANDROID_KEY" />
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity android:name="com.umeng.qq.tencent.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <data android:scheme="tencent$UM_SHARE_QQ_ANDROID_ID"/>
+        </intent-filter>
+      </activity>
+      <activity android:name="com.umeng.qq.tencent.AssistActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </config-file>
+    <framework src="src/android/UMShareQQ.gradle" custom="true" type="gradleReference" />
+    <source-file src="src/android/UMShareQQ.java" target-dir="src/news/chen/yu/ionic" />
+  </platform>
+</plugin>

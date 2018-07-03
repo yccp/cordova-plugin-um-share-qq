@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-um-share-qq",
+  "version": "1.0.0",
+  "description": "Umeng Share QQ Suport",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yu Chen",
+  "license": "ISC",
+  "cordova": {
+    "id": "cordova-plugin-um-share-qq",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yccp/cordova-plugin-um-share-qq.git"
+  },
+  "keywords": [
+    "cordova",
+    "umeng",
+    "qq",
+    "share",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "bugs": {
+    "url": "https://github.com/yccp/cordova-plugin-um-share-qq/issues"
+  },
+  "homepage": "https://github.com/yccp/cordova-plugin-um-share-qq#readme"
+}
