@@ -1,6 +1,9 @@
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-    compile 'com.umeng.sdk:share-qq:latest.integration'
+    compile files('libs/umeng-share-QQ-simplify-6.9.2.jar')
 }

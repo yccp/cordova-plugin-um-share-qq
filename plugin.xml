@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin 
-  xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-um-share-qq" version="1.0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-um-share-qq" version="1.0.1">
   <name>UMShareQQ</name>
   <description>Cordova Plugin for Umeng Share QQ Suport</description>
   <license>ISC</license>
@@ -85,17 +84,20 @@
       <preference name="UM_SHARE_QQ_KEY" value="$UM_SHARE_QQ_KEY" />
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <activity android:name="com.umeng.qq.tencent.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
+      <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
         <intent-filter>
-          <action android:name="android.intent.action.VIEW"/>
-          <category android:name="android.intent.category.DEFAULT"/>
-          <category android:name="android.intent.category.BROWSABLE"/>
-          <data android:scheme="tencent$UM_SHARE_QQ_ID"/>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="tencent$UM_SHARE_QQ_ID" />
         </intent-filter>
       </activity>
-      <activity android:name="com.umeng.qq.tencent.AssistActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+      <activity android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|keyboardHidden|screenSize"/>
     </config-file>
     <framework src="src/android/UMShareQQ.gradle" custom="true" type="gradleReference" />
+    <resource-file src="src/android/libs/umeng-share-QQ-simplify-6.9.2.jar" target="libs/umeng-share-QQ-simplify-6.9.2.jar" />
+    <resource-file src="src/android/res/drawable/umeng_socialize_qq.png" target="res/drawable/drawable/umeng_socialize_qq.png" />
+    <resource-file src="src/android/res/drawable/umeng_socialize_qzone.png" target="res/drawable/umeng_socialize_qzone.png" />
     <source-file src="src/android/UMShareQQ.java" target-dir="src/news/chen/yu/ionic" />
   </platform>
 </plugin>
