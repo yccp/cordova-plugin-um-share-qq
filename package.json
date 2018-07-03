@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-um-share-qq",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Umeng Share QQ Suport",
   "main": "index.js",
   "scripts": {
