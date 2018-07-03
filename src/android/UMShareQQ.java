@@ -16,8 +16,8 @@ public class UMShareQQ extends CordovaPlugin {
                 UMShare.mediaList.add(SHARE_MEDIA.QQ);
             if(!UMShare.mediaList.contains(SHARE_MEDIA.QZONE))
                 UMShare.mediaList.add(SHARE_MEDIA.QZONE);
-            String appKey = preferences.getString("um_share_qq_android_id", "");
-            String appSecret = preferences.getString("um_share_qq_android_key", "");
+            String appKey = preferences.getString("um_share_qq_id", "");
+            String appSecret = preferences.getString("um_share_qq_key", "");
             PlatformConfig.setQQZone(appKey, appSecret);
         }
     }

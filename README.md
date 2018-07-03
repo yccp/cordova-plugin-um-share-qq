@@ -6,9 +6,9 @@
 ## 安装
 
 ```
-cordova plugin add cordova-plugin-um-share-qq --variable UM_SHARE_QQ_IOS_ID=你的IOS_ID --variable UM_SHARE_QQ_ANDROID_ID=你的ANDROID_ID --variable UM_SHARE_QQ_ANDROID_KEY=你的IOS_KEY --save
+cordova plugin add cordova-plugin-um-share-qq --variable UM_SHARE_QQ_ID=你的IOS_ID --variable UM_SHARE_QQ_KEY=你的IOS_KEY --save
 ```
 或
 ```
-ionic cordova plugin add cordova-plugin-um-share-qq --variable UM_SHARE_QQ_IOS_ID=你的IOS_ID --variable UM_SHARE_QQ_ANDROID_ID=你的ANDROID_ID --variable UM_SHARE_QQ_ANDROID_KEY=你的IOS_KEY
+ionic cordova plugin add cordova-plugin-um-share-qq --variable UM_SHARE_QQ_ID=你的IOS_ID --variable UM_SHARE_QQ_KEY=你的IOS_KEY
 ```

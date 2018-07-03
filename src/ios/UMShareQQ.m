@@ -12,8 +12,8 @@
 {
     // Put here the code that should be on the AppDelegate.m
     // 获取AppKey
-    NSString *appKey = [[self.commandDelegate settings] objectForKey:@"um_share_qq_ios_id"];
-    NSString *appSecret = [[self.commandDelegate settings] objectForKey:@"um_share_qq_ios_key"];
+    NSString *appKey = [[self.commandDelegate settings] objectForKey:@"um_share_qq_id"];
+    NSString *appSecret = [[self.commandDelegate settings] objectForKey:@"um_share_qq_key"];
     /* 设置分享到QQ互联的appID
      * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
      100424468.no permission of union id
