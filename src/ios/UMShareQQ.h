@@ -1,5 +1,5 @@
 #import <Cordova/CDVPlugin.h>
-#import <UMSocialCore/UMSocialCore.h>
+#import <UMShare/UMShare.h>
 
 @interface UMShareQQ : CDVPlugin
 
